@@ -7,7 +7,7 @@ const app: Application = express();
 const port = process.env.PORT || 8000;
 
 app.get("/", async (req: Request, res: Response) => {
-  res.send("<h1>Welcome to Express & TypeScript Server</h1>");
+  res.send("<h1>Welcome to CI/CD Docker EC2</h1>");
 });
 
 app.listen(port, () => {
