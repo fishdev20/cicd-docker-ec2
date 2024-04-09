@@ -28,10 +28,10 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
     - name: Build docker image
-      run: sudo docker build -t minngu20/cicd-docker-ec2 .
+      run: docker build -t minngu20/cicd-docker-ec2 .
 
     - name: Push to Dockerhub
-      run: sudo docker push minngu20/cicd-docker-ec2:latest
+      run: docker push minngu20/cicd-docker-ec2:latest
 
     - name: Use Node.js ${{ matrix.node-version }}
 
