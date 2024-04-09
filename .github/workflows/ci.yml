@@ -30,6 +30,7 @@ jobs:
     - name: Build docker image
       run: docker build -t minngu20/cicd-docker-ec2 .
 
+
     - name: Push to Dockerhub
       run: docker push minngu20/cicd-docker-ec2:latest
 
