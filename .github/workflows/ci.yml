@@ -20,7 +20,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
     - name: Login Dockerhub
       env: 
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
@@ -28,7 +27,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
     - name: Build docker image
-      run: docker build -t cicd-docker-ec2 .
+      run: docker build -t minngu20/cicd-docker-ec2:latest .
 
     - name: Push to Dockerhub
       run: docker push minngu20/cicd-docker-ec2:latest
