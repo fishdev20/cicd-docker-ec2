@@ -28,7 +28,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
     - name: Build docker image
-      run: docker build -t cicd-docker-ec2 .
+      run: docker build -t minngu20/cicd-docker-ec2 .
 
     - name: Push to Dockerhub
       run: docker push minngu20/cicd-docker-ec2:latest
